@@ -27,7 +27,7 @@ echo.
 set /p url="Cole o link do video: "
 echo.
 echo Baixando... aguarde.
-yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" --embed-thumbnail --add-metadata -o "%%(title)s.%%(ext)s" "%url%"
+yt-dlp --no-playlist -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" --embed-thumbnail --add-metadata -o "%%(title)s.%%(ext)s" "%url%"
 echo.
 echo Download concluido com sucesso!
 pause
@@ -40,7 +40,7 @@ echo.
 set /p url="Cole o link do video: "
 echo.
 echo Extraindo audio... aguarde.
-yt-dlp -x --audio-format mp3 --audio-quality 0 --embed-thumbnail --add-metadata -o "%%(title)s.%%(ext)s" "%url%"
+yt-dlp --no-playlist -x --audio-format mp3 --audio-quality 0 --embed-thumbnail --add-metadata -o "%%(title)s.%%(ext)s" "%url%"
 echo.
 echo Download concluido com sucesso!
 pause
